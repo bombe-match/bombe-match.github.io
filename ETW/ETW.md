@@ -35,7 +35,7 @@ Example :
 
 ![截圖 2024-06-27 下午5.04.06.png](ETWpic/logman1.png)
 
-- Viewing a specific Provider
+- `logman query providers "Microsoft-Windows-PowerShell"`Viewing a specific Provider
     
     ![截圖 2024-06-27 下午5.07.30.png](ETWpic/logman2.png)
     
@@ -122,18 +122,18 @@ int main()
 
 ETWProcessMon2 is for Monitoring Process/Thread/Memory/Imageloads/TCPIP via ETW + Detection for Remote-Thread-Injection & Payload Detection by VirtualMemAlloc Events (in-memory) etc. For details, please refer to [ETWProcessMon2](https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file) 。
 
-### **工具**
+### **Tools**
 
-[https://github.com/jdu2600/Windows10EtwEvents](https://github.com/jdu2600/Windows10EtwEvents)
+- [https://github.com/jdu2600/Windows10EtwEvents](https://github.com/jdu2600/Windows10EtwEvents)
 
-[https://learn.microsoft.com/zh-tw/windows-server/administration/windows-commands/logman](https://learn.microsoft.com/zh-tw/windows-server/administration/windows-commands/logman)
+- [https://learn.microsoft.com/zh-tw/windows-server/administration/windows-commands/logman](https://learn.microsoft.com/zh-tw/windows-server/administration/windows-commands/logman)
 
-[https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file](https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file)
+- [https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file](https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file)
 
-### **資源**
+### **Resource**
 
-[https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/etw-event-tracing-for-windows-101](https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/etw-event-tracing-for-windows-101)
+- [https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/etw-event-tracing-for-windows-101](https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/etw-event-tracing-for-windows-101)
 
-[https://github.com/microsoft/krabsetw](https://github.com/microsoft/krabsetw)
+- [https://github.com/microsoft/krabsetw](https://github.com/microsoft/krabsetw)
 
-[https://blog.securehat.co.uk/detection-experiments/detecting-parent-process-spoofing-using-krabsetw](https://blog.securehat.co.uk/detection-experiments/detecting-parent-process-spoofing-using-krabsetw)
+- [https://blog.securehat.co.uk/detection-experiments/detecting-parent-process-spoofing-using-krabsetw](https://blog.securehat.co.uk/detection-experiments/detecting-parent-process-spoofing-using-krabsetw)
