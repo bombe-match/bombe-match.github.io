@@ -2,7 +2,7 @@
 
 Event Tracing for Windows (ETW) provides a mechanism to trace and log events that are raised by user-mode applications and kernel-mode drivers.
 
-![Untitled](ETWpic/ETWArch.png)
+![Untitled](../../../assets/ETWpic/ETWArch.png)
 
 The components of ETW include Controller, Provider, Consumer, and Session :
 
