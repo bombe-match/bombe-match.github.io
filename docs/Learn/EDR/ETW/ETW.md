@@ -21,7 +21,7 @@ Example :
 
 Check Microsoft-Windows-Kernel-Process event
 
-![Untitled](ETWpic/Win10etwevent.png)
+![Untitled](../../../assets/ETWpic/Win10etwevent.png)
 
 ---
 
@@ -33,15 +33,15 @@ Example :
 
 - `logman query providers` allows you to see all configured Providers on the system
 
-![截圖 2024-06-27 下午5.04.06.png](ETWpic/logman1.png)
+![截圖 2024-06-27 下午5.04.06.png](../../../assets/ETWpic/logman1.png)
 
 - Viewing a specific Provider
     
-    ![截圖 2024-06-27 下午5.07.30.png](ETWpic/logman2.png)
+    ![截圖 2024-06-27 下午5.07.30.png](../../../assets/ETWpic/logman2.png)
     
 - `logman create trace powershell-tracing -ets` Creating a session
     
-    ![截圖 2024-06-27 下午5.09.12_0.png](ETWpic/logman3.png)
+    ![截圖 2024-06-27 下午5.09.12_0.png](../../../assets/ETWpic/logman3.png)
     
 - `logman update powershell-tracing -p Microsoft-Windows-PowerShell 0x83 -ets`
     
@@ -54,11 +54,11 @@ Example :
         - 0x0000000000000080  Session
         - 0x01 + 0x02 + 0x80 = 0x83
             
-            ![截圖 2024-06-27 下午5.11.56_0.png](ETWpic/logman4.png)
+            ![截圖 2024-06-27 下午5.11.56_0.png](../../../assets/ETWpic/logman4.png)
             
 - You can see `powershell-tracing.etl` from the Event Viewer.
     
-    ![messageImage_1719479691276.jpg](ETWpic/EventViewer.jpg)
+    ![messageImage_1719479691276.jpg](../../../assets/ETWpic/EventViewer.jpg)
     
 
 ---
@@ -114,7 +114,7 @@ int main()
 
 </aside>
 
-![Untitled](ETWpic/krebsetw.png)
+![Untitled](../../../assets/ETWpic/krebsetw.png)
 
 ---
 
