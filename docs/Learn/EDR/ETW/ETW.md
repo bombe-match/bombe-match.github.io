@@ -122,7 +122,7 @@ int main()
 
 ETWProcessMon2 is for Monitoring Process/Thread/Memory/Imageloads/TCPIP via ETW + Detection for Remote-Thread-Injection & Payload Detection by VirtualMemAlloc Events (in-memory) etc. For details, please refer to [ETWProcessMon2](https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file) 。
 
-### **工具**
+### **Tool**
 
 [https://github.com/jdu2600/Windows10EtwEvents](https://github.com/jdu2600/Windows10EtwEvents)
 
@@ -130,7 +130,7 @@ ETWProcessMon2 is for Monitoring Process/Thread/Memory/Imageloads/TCPIP via ETW 
 
 [https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file](https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file)
 
-### **資源**
+### **Resource**
 
 [https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/etw-event-tracing-for-windows-101](https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/etw-event-tracing-for-windows-101)
 
