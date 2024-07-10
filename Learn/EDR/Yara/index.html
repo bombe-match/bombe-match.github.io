@@ -22,7 +22,7 @@
     
     
       
-        <title>Yara - BOMBE Docs</title>
+        <title>Yara rule - BOMBE Docs</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#yara" class="md-skip">
+        <a href="#yara-rule" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Yara
+              Yara rule
             
           </span>
         </div>
@@ -358,15 +358,99 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Yara rule
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Yara
+    Yara rule
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-software-when-writing-yara-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended software when writing Yara rule
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-components-of-yara" class="md-nav__link">
+    <span class="md-ellipsis">
+      The components of Yara
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-of-yara-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of Yara rule
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-yara-from-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Yara from Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -577,6 +661,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-software-when-writing-yara-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended software when writing Yara rule
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-components-of-yara" class="md-nav__link">
+    <span class="md-ellipsis">
+      The components of Yara
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-of-yara-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of Yara rule
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-yara-from-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Yara from Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -590,7 +736,132 @@
                   
 
 
-<h1 id="yara">Yara</h1>
+<h1 id="yara-rule">Yara rule</h1>
+<p>YARA is a tool primarily used for identifying and classifying malware samples. It is widely utilized in cybersecurity, especially by threat hunters and researchers.</p>
+<p>What we can do with Yara?</p>
+<ul>
+<li>Identify and classify malware</li>
+<li>find new malware samples and based on family-specific features</li>
+<li>find new exploits and zero-days</li>
+<li>help speeding up incident response</li>
+<li>classification: identify file formats, archives, packed files, known threats</li>
+<li>build your own private antivirus</li>
+</ul>
+<h2 id="recommended-software-when-writing-yara-rule">Recommended software when writing Yara rule</h2>
+<p>These tools can help you write YARA rules more smoothly.</p>
+<ul>
+<li>String analyzer</li>
+<li>PE file structure viewer</li>
+<li>Hex viewer</li>
+<li>Binary diffing tool</li>
+<li>IDA Pro / Ghidra</li>
+</ul>
+<h2 id="the-components-of-yara">The components of Yara</h2>
+<p>Yara include Meta, Strings, Condition</p>
+<ul>
+<li>Meta: The meta section contains metadata about the rule. It's not used for matching but provides useful information.</li>
+<li>String: The strings section lists the patterns the rule is looking for in the files.</li>
+<li>Condition: The condition section defines the criteria for the rule to match.</li>
+</ul>
+<h2 id="example-of-yara-rule">Example of Yara rule</h2>
+<pre><code class="language-C">rule ExampleRule {
+    meta:
+        author = &quot;Bobo&quot;
+        type = &quot;APT&quot;
+        description = &quot;This rule detects a specific malicious file based on known strings.&quot;
+        date = &quot;2024-07-01&quot;
+    strings:
+        $string1 = &quot;malicious_string_1&quot;
+        $string2 = &quot;malicious_string_2&quot;
+        $hex_string = { 6D 61 6C 69 63 69 6F 75 73 }
+    condition:
+        (uint16(0) == 0x4D5A) and (any of ($string*)) (filesize &lt; 5000000) and ($hex_string)
+}
+</code></pre>
+<p>In the above example : </p>
+<ul>
+<li>The meta section includes information about this rule such as the author's name, category, a brief description, and the creation date</li>
+<li>The strings section includes what the rule looking for :<ul>
+<li>$string1: This string identifier looks for the ASCII string "malicious_string_1". </li>
+<li>$string2: This string identifier looks for the ASCII string "malicious_string_2". </li>
+<li>$hex_string: This identifier looks for a specific sequence of hexadecimal bytes (which translates to the ASCII string "malicious").</li>
+</ul>
+</li>
+<li>In this condition, it means that it should successfully match certain conditions.<ul>
+<li>uint16(0) == 0x4D5A: This checks if the first two bytes of the file are 0x4D5A, which is the magic number for a Windows executable (MZ header).</li>
+<li>any of ($string*): This checks if any of the strings defined in the strings section (with identifiers starting with $string) are present in the file.</li>
+<li>the filesize can't &gt; 5MB</li>
+<li>($hex_string): This checks if the specific hexadecimal string is present in the file.</li>
+</ul>
+</li>
+</ul>
+<p>To run this rule, open the terminal and type : </p>
+<pre><code class="language-c">yara -r -s ExampleRule.yara  game.exe
+</code></pre>
+<p><code>-r</code> is used to check all the directory recursively.
+<code>-s</code> is used to show the matched strings.
+ExampleRule.yara is the rule file we made earlier.
+game.exe is the malware file we check for matching strings.</p>
+<p>For more detailed information about YARA rule keywords and methods, please refer to its documentation.
+https://yara.readthedocs.io/en/stable/index.html</p>
+<h2 id="using-yara-from-python">Using Yara from Python</h2>
+<p>Here's a simple example of writing a YARA scanner in Python using the yara-python library. This script will compile a YARA rule, scan a file for matches, and print the results.</p>
+<p>Before you start, make sure you have the yara-python library installed. You can install it using pip:</p>
+<pre><code>pip install yara-python
+</code></pre>
+<p>The Yara rule using what we have just created:</p>
+<pre><code class="language-C">rule ExampleRule {
+    meta:
+        author = &quot;Bobo&quot;
+        type = &quot;APT&quot;
+        description = &quot;This rule detects a specific malicious file based on known strings.&quot;
+        date = &quot;2024-07-01&quot;
+    strings:
+        $string1 = &quot;malicious_string_1&quot;
+        $string2 = &quot;malicious_string_2&quot;
+        $hex_string = { 6D 61 6C 69 63 69 6F 75 73 }
+    condition:
+        (uint16(0) == 0x4D5A) and (any of ($string*)) (filesize &lt; 5000000) and ($hex_string)
+}
+</code></pre>
+<p>Next, create a Python script named yara_scanner.py:</p>
+<pre><code class="language-python">import yara
+
+# Define the path to the YARA rule file and the file to scan
+rule_file = 'example_rule.yar'
+file_to_scan = 'sample_file.exe'
+
+# Compile the YARA rule
+rules = yara.compile(filepath=rule_file)
+
+# Scan the file
+matches = rules.match(file_to_scan)
+
+# Print the results
+if matches:
+    print(f&quot;YARA rule matched! Details:\n{matches}&quot;)
+else:
+    print(&quot;No matches found.&quot;)
+</code></pre>
+<p>To run the script, save it as yara_scanner.py and run it in your terminal:</p>
+<pre><code class="language-python">python yara_scanner.py
+</code></pre>
+<p>Make sure you have a file named sample_file.exe to scan in the same directory as the script or provide the correct path to a file you want to scan.</p>
+<p>For more detailed information about Yara-python  keywords and methods, please refer to its documentation
+https://yara.readthedocs.io/en/stable/yarapython.html</p>
+<h2 id="tools">Tools</h2>
+<ul>
+<li><a href="https://github.com/VirusTotal/yara">https://github.com/VirusTotal/yara</a></li>
+<li><a href="https://github.com/VirusTotal/yara-python">https://github.com/VirusTotal/yara-python</a></li>
+<li><a href="https://github.com/InQuest/awesome-yara">https://github.com/InQuest/awesome-yara</a></li>
+<li><a href="https://github.com/100DaysofYARA">https://github.com/100DaysofYARA</a></li>
+</ul>
+<h2 id="resource">Resource</h2>
+<ul>
+<li><a href="https://www.brighttalk.com/webcast/15591/388802">https://www.brighttalk.com/webcast/15591/388802</a></li>
+<li><a href="https://www.picussecurity.com/resource/glossary/what-is-a-yara-rule">https://www.picussecurity.com/resource/glossary/what-is-a-yara-rule</a></li>
+<li><a href="https://www.varonis.com/blog/yara-rules">https://www.varonis.com/blog/yara-rules</a></li>
+</ul>
 
 
 
@@ -598,6 +869,30 @@
 
 
 
+
+  <aside class="md-source-file">
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.536 5.536 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13v-1.75M0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20H0m24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9V20Z"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:157232879+l3inapo@users.noreply.github.com">Bobo</a>, 
+        <a href="mailto:jameszaq123@gmail.com">l3inapo</a>, 
+        <a href="mailto:oalieno.chao@cycraft.com">oalieno</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
 
 
 
