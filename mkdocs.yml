@@ -2,5 +2,8 @@ site_name: BOMBE Docs
 site_url: https://bombe-match.github.io/BOMBE-Docs
 theme:
   name: material
+plugins:
+  - search
+  - git-authors
 markdown_extensions:
   - footnotes
