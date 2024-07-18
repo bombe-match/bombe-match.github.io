@@ -2,7 +2,7 @@
 
 Event Tracing for Windows (ETW) provides a mechanism to trace and log events that are raised by user-mode applications and kernel-mode drivers.
 
-![Untitled](../../../assets/ETWpic/ETWArch.png)
+![Untitled](../../assets/ETWpic/ETWArch.png)
 
 The components of ETW include Controller, Provider, Consumer, and Session :
 
@@ -15,13 +15,13 @@ The components of ETW include Controller, Provider, Consumer, and Session :
 
 One Provider may offer multiple events, each identified by a specific Event ID.
 
-Therefore, there are online resources that compile information about various Providers and their corresponding event IDs. For details, please refer to [**Windows10EtwEvents](https://github.com/jdu2600/Windows10EtwEvents/tree/main).**
+Therefore, there are online resources that compile information about various Providers and their corresponding event IDs. For details, please refer to [Windows10EtwEvents](https://github.com/jdu2600/Windows10EtwEvents/tree/main).
 
 Example : 
 
 Check Microsoft-Windows-Kernel-Process event
 
-![Untitled](../../../assets/ETWpic/Win10etwevent.png)
+![Untitled](../../assets/ETWpic/Win10etwevent.png)
 
 ---
 
@@ -33,15 +33,15 @@ Example :
 
 - `logman query providers` allows you to see all configured Providers on the system
 
-![截圖 2024-06-27 下午5.04.06.png](../../../assets/ETWpic/logman1.png)
+![截圖 2024-06-27 下午5.04.06.png](../../assets/ETWpic/logman1.png)
 
 - Viewing a specific Provider
     
-    ![截圖 2024-06-27 下午5.07.30.png](../../../assets/ETWpic/logman2.png)
+    ![截圖 2024-06-27 下午5.07.30.png](../../assets/ETWpic/logman2.png)
     
 - `logman create trace powershell-tracing -ets` Creating a session
     
-    ![截圖 2024-06-27 下午5.09.12_0.png](../../../assets/ETWpic/logman3.png)
+    ![截圖 2024-06-27 下午5.09.12_0.png](../../assets/ETWpic/logman3.png)
     
 - `logman update powershell-tracing -p Microsoft-Windows-PowerShell 0x83 -ets`
     
@@ -54,18 +54,18 @@ Example :
         - 0x0000000000000080  Session
         - 0x01 + 0x02 + 0x80 = 0x83
             
-            ![截圖 2024-06-27 下午5.11.56_0.png](../../../assets/ETWpic/logman4.png)
+            ![截圖 2024-06-27 下午5.11.56_0.png](../../assets/ETWpic/logman4.png)
             
 - You can see `powershell-tracing.etl` from the Event Viewer.
     
-    ![messageImage_1719479691276.jpg](../../../assets/ETWpic/EventViewer.jpg)
+    ![messageImage_1719479691276.jpg](../../assets/ETWpic/EventViewer.jpg)
     
 
 ---
 
 ### krabsetw
 
-krabsetw ****is a C++ library that simplifies interaction with ETW. For details, please refer to [krabsetw](https://github.com/microsoft/krabsetw).
+krabsetw is a C++ library that simplifies interaction with ETW. For details, please refer to [krabsetw](https://github.com/microsoft/krabsetw)。
 
 The following uses the krabsetw library to monitor process start events in the Windows system.
 
@@ -114,26 +114,22 @@ int main()
 
 </aside>
 
-![Untitled](../../../assets/ETWpic/krebsetw.png)
+![Untitled](../../assets/ETWpic/krebsetw.png)
 
 ---
 
 ### ETWProcessMon2
 
-ETWProcessMon2 is for Monitoring Process/Thread/Memory/Imageloads/TCPIP via ETW + Detection for Remote-Thread-Injection & Payload Detection by VirtualMemAlloc Events (in-memory) etc. For details, please refer to [ETWProcessMon2](https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file) .
+ETWProcessMon2 is for Monitoring Process/Thread/Memory/Imageloads/TCPIP via ETW + Detection for Remote-Thread-Injection & Payload Detection by VirtualMemAlloc Events (in-memory) etc. For details, please refer to [ETWProcessMon2](https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file) 。
 
 ### **Tools**
 
-[https://github.com/jdu2600/Windows10EtwEvents](https://github.com/jdu2600/Windows10EtwEvents)
-
-[https://learn.microsoft.com/zh-tw/windows-server/administration/windows-commands/logman](https://learn.microsoft.com/zh-tw/windows-server/administration/windows-commands/logman)
-
-[https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file](https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file)
+- [https://github.com/jdu2600/Windows10EtwEvents](https://github.com/jdu2600/Windows10EtwEvents)
+- [https://learn.microsoft.com/zh-tw/windows-server/administration/windows-commands/logman](https://learn.microsoft.com/zh-tw/windows-server/administration/windows-commands/logman)
+- [https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file](https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file)
 
 ### **Resource**
 
-[https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/etw-event-tracing-for-windows-101](https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/etw-event-tracing-for-windows-101)
-
-[https://github.com/microsoft/krabsetw](https://github.com/microsoft/krabsetw)
-
-[https://blog.securehat.co.uk/detection-experiments/detecting-parent-process-spoofing-using-krabsetw](https://blog.securehat.co.uk/detection-experiments/detecting-parent-process-spoofing-using-krabsetw)
+- [https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/etw-event-tracing-for-windows-101](https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/etw-event-tracing-for-windows-101)
+- [https://github.com/microsoft/krabsetw](https://github.com/microsoft/krabsetw)
+- [https://blog.securehat.co.uk/detection-experiments/detecting-parent-process-spoofing-using-krabsetw](https://blog.securehat.co.uk/detection-experiments/detecting-parent-process-spoofing-using-krabsetw)
