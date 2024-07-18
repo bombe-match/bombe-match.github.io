@@ -65,7 +65,7 @@ Example :
 
 ### krabsetw
 
-krabsetw ****is a C++ library that simplifies interaction with ETW. For details, please refer to [krabsetw](https://github.com/microsoft/krabsetw)。
+krabsetw ****is a C++ library that simplifies interaction with ETW. For details, please refer to [krabsetw](https://github.com/microsoft/krabsetw).
 
 The following uses the krabsetw library to monitor process start events in the Windows system.
 
@@ -120,7 +120,7 @@ int main()
 
 ### ETWProcessMon2
 
-ETWProcessMon2 is for Monitoring Process/Thread/Memory/Imageloads/TCPIP via ETW + Detection for Remote-Thread-Injection & Payload Detection by VirtualMemAlloc Events (in-memory) etc. For details, please refer to [ETWProcessMon2](https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file) 。
+ETWProcessMon2 is for Monitoring Process/Thread/Memory/Imageloads/TCPIP via ETW + Detection for Remote-Thread-Injection & Payload Detection by VirtualMemAlloc Events (in-memory) etc. For details, please refer to [ETWProcessMon2](https://github.com/DamonMohammadbagher/ETWProcessMon2?tab=readme-ov-file) .
 
 ### **Tools**
 
