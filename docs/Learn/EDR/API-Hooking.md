@@ -6,7 +6,7 @@ The process of API hooking
 ---
 API hooking occurs during the startup of a program when certain libraries/DLLs are loaded as modules into the address space of the corresponding user program.
 
-![API hooking](docs/assets/API_Hooking/APIHooking.png)
+![API hooking]([docs/assets/API_Hooking/APIHooking.png](https://github.com/hui-sing/bombe-match.github.io/blob/main/docs/assets/API_Hooking/APIHooking.png))
 
 Step 1: When the program calls MessageBoxA(), it jumps to the address of that function.
 
@@ -61,14 +61,14 @@ int main()
 }
 ```
 Hooking :
-![Ex1](https://hackmd.io/_uploads/B13zGI9_C.png)
+![Ex1]([https://hackmd.io/_uploads/B13zGI9_C.png](https://github.com/hui-sing/bombe-match.github.io/blob/main/docs/assets/API_Hooking/AttachExample.png))
 Cancel hooking :
-![Ex2](https://hackmd.io/_uploads/BkxDML9_C.png)
+![Ex2]([https://hackmd.io/_uploads/BkxDML9_C.png](https://github.com/hui-sing/bombe-match.github.io/blob/main/docs/assets/API_Hooking/DetachExample.png))
 
 EDR hook list
 ---
 Antivirus software and Endpoint Detection and Response (EDR) platforms can also use behavior-based analysis to identify suspicious API activities. For a list of commonly used EDR hooks, you can refer to this curated [EDR hook list](https://github.com/Mr-Un1k0d3r/EDRs/tree/main?tab=readme-ov-file).
-![EDR hook list](https://hackmd.io/_uploads/SJ2k7IcO0.png)
+![EDR hook list]([https://hackmd.io/_uploads/SJ2k7IcO0.png](https://github.com/hui-sing/bombe-match.github.io/blob/main/docs/assets/API_Hooking/EDRHookList.png))
 
 
 
