@@ -6,7 +6,7 @@ The process of API hooking
 ---
 API hooking occurs during the startup of a program when certain libraries/DLLs are loaded as modules into the address space of the corresponding user program.
 
-![API hooking](https://hackmd.io/_uploads/rJks1U9dR.png)
+![API hooking](docs/assets/API_Hooking/APIHooking.png)
 
 Step 1: When the program calls MessageBoxA(), it jumps to the address of that function.
 
