@@ -11,6 +11,7 @@ theme:
     - navigation.tabs
 plugins:
   - search
+  - awesome-pages
   - git-committers:
       repository: bombe-match/bombe-match.github.io
       branch: main
