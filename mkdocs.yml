@@ -1,9 +1,28 @@
 site_name: BOMBE Docs
 site_url: https://bombe-match.github.io/BOMBE-Docs
+repo_name: bombe-match/bombe-match.github.io
+repo_url: https://github.com/bombe-match/bombe-match.github.io
 theme:
   name: material
+  palette:
+    scheme: slate
+  features:
+    - navigation.instant
+    - navigation.tabs
 plugins:
   - search
-  - git-authors
+  - git-committers:
+      repository: bombe-match/bombe-match.github.io
+      branch: main
+  - git-revision-date-localized:
+      enable_creation_date: true
 markdown_extensions:
   - footnotes
+  - pymdownx.magiclink
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

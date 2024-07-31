@@ -1,12 +1,12 @@
-API hooking
----
+# API hooking
+
 API hooking is a process of intercepting and altering the behavior of API calls. This technique is commonly used by many Endpoint Detection and Response (EDR) or antivirus vendors to monitor processes or code execution in real-time for malicious activity.
 
-The process of API hooking
----
+## The process of API hooking
+
 API hooking occurs during the startup of a program when certain libraries/DLLs are loaded as modules into the address space of the corresponding user program.
 
-![API hooking](https://github.com/hui-sing/bombe-match.github.io/blob/main/docs/assets/API_Hooking/APIHooking.png))
+![API hooking](../../assets/API-Hooking/APIHooking.png)
 
 Step 1: When the program calls MessageBoxA(), it jumps to the address of that function.
 
@@ -16,14 +16,15 @@ Step 3: After executing the hook, it jumps to the trampoline function, which con
 
 Step 4: Once MessageBoxA() finishes executing, it returns to the user code to continue execution.
 
-Microsoft Detours
----
+## Microsoft Detours
+
 Microsoft Detours is a software package for monitoring and intercepting API calls on Windows. It provides a general method for implementing x86 and x64 Windows API hooking, allowing for monitoring, tampering, or any other actions you wish to perform using API hooking. For more details, please refer to [Detours](https://github.com/microsoft/Detours).
 
 Example:
 
 The following code demonstrates how to use the Detours library to hook a function on the Windows platform and how to unhook it.
-```
+
+```c++
 #include <windows.h>
 #include <detours.h>
 #include <iostream>
@@ -60,27 +61,26 @@ int main()
     return 0;
 }
 ```
+
 Hooking :
-![Ex1](https://github.com/hui-sing/bombe-match.github.io/blob/main/docs/assets/API_Hooking/AttachExample.png)
+![Ex1](../../assets/API-Hooking/AttachExample.png)
 Cancel hooking :
-![Ex2](https://github.com/hui-sing/bombe-match.github.io/blob/main/docs/assets/API_Hooking/DetachExample.png)
+![Ex2](../../assets/API-Hooking/DetachExample.png)
 
-EDR hook list
----
-Antivirus software and Endpoint Detection and Response (EDR) platforms can also use behavior-based analysis to identify suspicious API activities. For a list of commonly used EDR hooks, you can refer to this curated [EDR hook list](https://github.com/Mr-Un1k0d3r/EDRs/tree/main?tab=readme-ov-file).
-![EDR hook list](https://github.com/hui-sing/bombe-match.github.io/blob/main/docs/assets/API_Hooking/EDRHookList.png)
+## EDR hook list
 
+Antivirus software and Endpoint Detection and Response (EDR) platforms can also use behavior-based analysis to identify suspicious API activities. For a list of commonly used EDR hooks, you can refer to this curated [EDR hook list](https://github.com/Mr-Un1k0d3r/EDRs).
 
+![EDR hook list](../../assets/API-Hooking/EDRHookList.png)
 
-Tools
----
+## Tools
+
 - https://github.com/microsoft/Detours
-- https://github.com/Mr-Un1k0d3r/EDRs/tree/main?tab=readme-ov-file
+- https://github.com/Mr-Un1k0d3r/EDRs
 
-Resource
----
+## Resource
+
 - https://www.ired.team/offensive-security/code-injection-process-injection/how-to-hook-windows-api-using-c++
-- https://xz.aliyun.com/t/9166?time__1311=n4%2BxuDgD9DyDnDfhD1D%2FD0WoQGQHv2cP2PRPDt4D&alichlgref=https%3A%2F%2Fwww.google.com%2F
 - https://khaled0x07.medium.com/windows-api-hooking-malware-analysis-960da6af5433
 - https://www.linkedin.com/pulse/eppedr-api-hooking-daniel-feichter-1e/
 - https://medium.com/@s12deff/api-hooking-with-detours-8d57313e59f6
