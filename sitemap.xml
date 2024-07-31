@@ -71,7 +71,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bombe-match.github.io/BOMBE-Docs/Rules/Competition-Format/</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bombe-match.github.io/BOMBE-Docs/Rules/EDR/</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bombe-match.github.io/BOMBE-Docs/Rules/Execution-Environment/</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Rules/FAQ/</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bombe-match.github.io/BOMBE-Docs/Rules/Malware/</loc>
+         <lastmod>2024-07-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bombe-match.github.io/BOMBE-Docs/Rules/Prices/</loc>
          <lastmod>2024-07-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
