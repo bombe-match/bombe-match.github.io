@@ -16,20 +16,20 @@ This API location can only be accessed within the competition's internal network
 
 ```json
 {
-  "answer": "Malicious program filename",
-  "secret": "User ID"
+  "answer": "malware filename",
+  "secret": "your secret"
 }
 ```
 
-Each answer submission must include a secret.
-
+Each answer submission must include a `secret`.  
+You will get a `secret` after you signup on our contest website.  
 Answers can only be submitted once.
 
-## Malicious Program Name Format
+## Malware Name Format
 
-The malicious program name is: `BOMBE_EDR_FLAG_xxx`, where `xxx` is a combination of 32 digits and letters.
+Malware name is: `BOMBE_EDR_FLAG_xxx`, where `xxx` is a combination of 32 digits and letters.
 
-There will be many programs with the above format as filenames in the environment. EDR must find the genuine malicious program among them.
+There will be many other normal programs with the same above format as filenames in the environment. EDR must find the malware among them.
 
 ## Prohibitions
 
@@ -38,7 +38,6 @@ There will be many programs with the above format as filenames in the environmen
 - Destroying the system environment, causing the program to be unable to execute.
 - Interrupting network connections.
 
-## Victory Conditions and Scoring Method
+## Victory Conditions
 
-- Victory Condition: Find the only malicious program in the environment and submit the answer to the specified API.
-- Scoring Method: Score will be updated using the ELO scoring system.
+Find the malware in the environment and submit the malware name to the specified API.

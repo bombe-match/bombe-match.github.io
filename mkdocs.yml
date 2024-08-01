@@ -4,6 +4,8 @@ repo_name: bombe-match/bombe-match.github.io
 repo_url: https://github.com/bombe-match/bombe-match.github.io
 theme:
   name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
   palette:
     scheme: slate
   features:
@@ -17,8 +19,10 @@ plugins:
       branch: main
   - git-revision-date-localized:
       enable_creation_date: true
+  - glightbox
 markdown_extensions:
   - footnotes
+  - admonition
   - pymdownx.magiclink
   - pymdownx.highlight:
       anchor_linenums: true
@@ -27,3 +31,4 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.details
