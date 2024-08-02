@@ -1,26 +1,24 @@
 # Scan Process Memory
 
-VirtualQuery is a Windows API function used to search for information about a specified memory region. This function is very useful for memory analysis and malware detection, especially when analyzing the memory distribution of a process.
+In addition to scanning static files with Yara rules, directly scanning memory is another effective strategy for detecting malicious behavior. To scan a process's memory, we can use the VirtualQuery function. VirtualQuery is a Windows API function that retrieves information about a specified memory region. This function is very useful for memory analysis and malware detection, particularly when analyzing the memory distribution of a process.
 
-## Syntax
+## VirtualQuery
 
-```Cpp
+The parameters of `VirtualQuery` is as follow. refer to https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualquery.
+
+```c
 
 SIZE_T VirtualQuery(
-  [in, optional] LPCVOID                   lpAddress, //A pointer to the base address of the region of pages
-  [out]          PMEMORY_BASIC_INFORMATION lpBuffer,  //A pointer to a MEMORY_BASIC_INFORMATION structure
-  [in]           SIZE_T                    dwLength //The size of the buffer pointed to by the lpBuffer
+  [in, optional] LPCVOID                   lpAddress, // A pointer to the base address of the region of pages
+  [out]          PMEMORY_BASIC_INFORMATION lpBuffer,  // A pointer to a MEMORY_BASIC_INFORMATION structure
+  [in]           SIZE_T                    dwLength   // The size of the buffer pointed to by the lpBuffer
 );
 ```
 
-For more detailed information about VirtualQuery keywords and methods, please refer to its documentation.
-https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualquery
-
 ## MEMORY_BASIC_INFORMATION
 
-Including information related to a range of pages in the process's virtual address space (e.g., base address, size, state, protection attributes, and type). The VirtualQuery function utilizes this structure.
-
-### Syntax
+The output of `VirtualQuery` will be stored in the structure of `MEMORY_BASIC_INFORMATION`. The structure including information related to a range of pages in the process's virtual address space (e.g., base address, size, state, protection attributes, and type).
+refer to https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-memory_basic_information.
 
 ```c
 typedef struct _MEMORY_BASIC_INFORMATION {
@@ -35,9 +33,6 @@ typedef struct _MEMORY_BASIC_INFORMATION {
 } MEMORY_BASIC_INFORMATION, *PMEMORY_BASIC_INFORMATION;
 
 ```
-
-For more detailed information about MEMORY_BASIC_INFORMATION keywords and methods, please refer to its documentation.
-https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-memory_basic_information
 
 ## Example 1 of VirtualQuery
 
@@ -72,8 +67,8 @@ The return values:
 Base Address: 0x00400000
 Allocation Base: 0x00400000
 Region Size: 4096 bytes
-State: 0x1000 //MEM_COMMIT
-Type: 0x20000 //MEM_PRIVATE
+State: 0x1000 // MEM_COMMIT
+Type: 0x20000 // MEM_PRIVATE
 ```
 
 ## Example 2 of VirtualQuery
@@ -119,19 +114,6 @@ int main() {
 }
 
 ```
-
-## Other similar software
-
-- Volatility:
-  Volatility is a powerful tool for memory forensics and analysis, extracting valuable information from memory snapshots without directly using VirtualQuery.
-- Rekall:
-  Similar to Volatility, Rekall is a memory forensics tool that achieves comparable effects in memory analysis, also without direct use of VirtualQuery.
-- Process Hacker:
-  Process Hacker is a robust tool for task management and system monitoring. It utilizes various techniques, including VirtualQuery or similar APIs, to access and modify memory.
-- Cheat Engine:
-  Cheat Engine is an open-source tool for scanning and modifying memory, commonly used for game cheats. It employs VirtualQuery and other APIs for these tasks.
-- WinDbg:
-  WinDbg, a Microsoft debugging tool, is used for memory analysis and debugging. While not primarily a memory scanning tool, it can assist in memory analysis using techniques that may involve VirtualQuery.
 
 ### Resource
 

@@ -99,10 +99,8 @@ int main()
 }
 ```
 
-<aside>
-👇 Note : The executable needs to be run with administrator privileges to function properly.
-
-</aside>
+???+ note
+    The executable needs to be run with administrator privileges to function properly.
 
 ![Untitled](../../assets/ETW/krebsetw.png)
 
