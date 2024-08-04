@@ -16,11 +16,11 @@ git clone https://github.com/bombe-match/bombe-poc
 
 We have publish a playground AMI `ami-0bb2ef6ddb9e62238` for you to test your sample. In AWS console, you can launch an new EC2 and search for our AMI `ami-0bb2ef6ddb9e62238`.
 
-![Search by AMI id](../assets/ami-1.png)
+![Search by AMI id](assets/ami-1.png)
 
 Choose our AMI in Communtiy AMI.
 
-![Choose our AMI in community AMI](../assets/ami-2.png)
+![Choose our AMI in community AMI](assets/ami-2.png)
 
 Inside the environment, we have already placed all 3 flags inside:
 
