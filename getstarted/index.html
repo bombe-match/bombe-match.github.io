@@ -1062,6 +1062,12 @@ The <code>secret</code> used in the sample and test environment is <code>0000000
 <p><a class="glightbox" href="../assets/ami-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Search by AMI id" src="../assets/ami-1.png" /></a></p>
 <p>Choose our AMI in Communtiy AMI.</p>
 <p><a class="glightbox" href="../assets/ami-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Choose our AMI in community AMI" src="../assets/ami-2.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">If you need RDP, change password first</p>
+<p>If you need RDP, you can use web console to change the password first.<br />
+Enter <code>net user Administrator &lt;your new password&gt;</code> in cmd to change password.<br />
+Then RDP to the EC2 with your newly changed password.</p>
+</div>
 <p>Inside the environment, we have already placed all 3 flags inside:</p>
 <ol>
 <li>Registry: <code>answer_1</code> in <code>HKCU:\SOFTWARE\BOMBE</code><ul>
