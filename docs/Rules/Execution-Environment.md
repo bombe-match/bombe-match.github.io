@@ -14,6 +14,8 @@
 
 Both EDR and Malware have Administrator privileges.
 
+## `whoami /all`
+
 ```
 PS C:\> whoami /all
 
@@ -72,3 +74,11 @@ SeTimeZonePrivilege                       Change the time zone                  
 SeCreateSymbolicLinkPrivilege             Create symbolic links                                              Enabled
 SeDelegateSessionUserImpersonatePrivilege Obtain an impersonation token for another user in the same session Enabled
 ```
+
+## msinfo32
+
+![](../assets/msinfo32.jpg)
+
+## DeviceGuard status
+
+![](../assets/deviceguard.jpg)
