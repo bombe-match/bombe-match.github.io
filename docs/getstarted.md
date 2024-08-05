@@ -14,7 +14,11 @@ git clone https://github.com/bombe-match/bombe-poc
 
 ## Test Environment
 
-We have publish a playground AMI `ami-0bb2ef6ddb9e62238` for you to test your sample. In AWS console, you can launch an new EC2 and search for our AMI `ami-0bb2ef6ddb9e62238`.
+We have publish a playground AMI `ami-0bb2ef6ddb9e62238` (us-west-2) for you to test your sample. In AWS console, you can launch an new EC2 and search for our AMI `ami-0bb2ef6ddb9e62238`.
+
+!!! warning "Remember to switch region"
+
+    You need to switch your region to `us-west-2` in order to use our AMI.
 
 ![Search by AMI id](assets/ami-1.png)
 
