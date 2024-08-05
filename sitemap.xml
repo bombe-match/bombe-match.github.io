@@ -2,102 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/getstarted/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Learn/EDR/API-Hooking/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Learn/EDR/ETW/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Learn/EDR/ScanMemory/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Learn/EDR/Yara/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Learn/Malware/Bypass-API-Hooking/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Learn/Malware/ETW-Patch/</loc>
-         <lastmod>2024-08-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bombe-match.github.io/BOMBE-Docs/Learn/Malware/Obfuscation/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Learn/Malware/PPID-Spoofing/</loc>
-         <lastmod>2024-08-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bombe-match.github.io/BOMBE-Docs/Learn/Malware/Packer/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Learn/Malware/Process-Injection/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bombe-match.github.io/BOMBE-Docs/Learn/Malware/Packing/Doing%20Pack/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <loc>https://bombe-match.github.io/BOMBE-Docs/Learn/Malware/Packer/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bombe-match.github.io/BOMBE-Docs/Learn/Malware/Packer/PythonPacker/</loc>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Rules/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Rules/Competition-Format/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Rules/EDR/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Rules/Execution-Environment/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Rules/FAQ/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Rules/Malware/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bombe-match.github.io/BOMBE-Docs/Rules/Prices/</loc>
-         <lastmod>2024-08-04</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
