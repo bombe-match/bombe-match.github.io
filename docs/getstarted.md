@@ -14,7 +14,7 @@ git clone https://github.com/bombe-match/bombe-poc
 
 ## Test Environment
 
-We have publish a playground AMI `ami-0bb2ef6ddb9e62238` (us-west-2) for you to test your sample. In AWS console, you can launch an new EC2 and search for our AMI `ami-0bb2ef6ddb9e62238`.
+We have publish a playground AMI `ami-0509b9e428fa9f997` (us-west-2) for you to test your sample. In AWS console, you can launch an new EC2 and search for our AMI `ami-0509b9e428fa9f997`.
 
 !!! warning "Remember to switch region"
 
@@ -26,11 +26,11 @@ Choose our AMI in Communtiy AMI.
 
 ![Choose our AMI in community AMI](assets/ami-2.png)
 
-!!! info "If you need RDP, change password first"
+!!! info "Login via RDP"
 
-    If you need RDP, you can use web console to change the password first.  
-    Enter `net user Administrator <your new password>` in cmd to change password.  
-    Then RDP to the EC2 with your newly changed password.
+    To use RDP with your EC2 instance, first expose the EC2 instance to the internet. 
+    Then, connect to the EC2 instance using its public IP via RDP. 
+    The default Administrator password is `Bombe@2024`. Be sure to change this password after logging in.
 
 Inside the environment, we have already placed all 3 flags inside:
 
