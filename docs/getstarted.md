@@ -26,6 +26,12 @@ Choose our AMI in Communtiy AMI.
 
 ![Choose our AMI in community AMI](assets/ami-2.png)
 
+!!! info "If you need RDP, change password first"
+
+    If you need RDP, you can use web console to change the password first.  
+    Enter `net user Administrator <your new password>` in cmd to change password.  
+    Then RDP to the EC2 with your newly changed password.
+
 Inside the environment, we have already placed all 3 flags inside:
 
 1. Registry: `answer_1` in `HKCU:\SOFTWARE\BOMBE`
