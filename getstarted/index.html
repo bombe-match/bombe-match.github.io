@@ -1054,7 +1054,7 @@ The <code>secret</code> used in the sample and test environment is <code>0000000
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bombe-match/bombe-poc
 </span></code></pre></div>
 <h2 id="test-environment">Test Environment</h2>
-<p>We have publish a playground AMI <code>ami-0bb2ef6ddb9e62238</code> (us-west-2) for you to test your sample. In AWS console, you can launch an new EC2 and search for our AMI <code>ami-0bb2ef6ddb9e62238</code>.</p>
+<p>We have publish a playground AMI <code>ami-0509b9e428fa9f997</code> (us-west-2) for you to test your sample. In AWS console, you can launch an new EC2 and search for our AMI <code>ami-0509b9e428fa9f997</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Remember to switch region</p>
 <p>You need to switch your region to <code>us-west-2</code> in order to use our AMI.</p>
@@ -1063,10 +1063,10 @@ The <code>secret</code> used in the sample and test environment is <code>0000000
 <p>Choose our AMI in Communtiy AMI.</p>
 <p><a class="glightbox" href="../assets/ami-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Choose our AMI in community AMI" src="../assets/ami-2.png" /></a></p>
 <div class="admonition info">
-<p class="admonition-title">If you need RDP, change password first</p>
-<p>If you need RDP, you can use web console to change the password first.<br />
-Enter <code>net user Administrator &lt;your new password&gt;</code> in cmd to change password.<br />
-Then RDP to the EC2 with your newly changed password.</p>
+<p class="admonition-title">Login via RDP</p>
+<p>To use RDP with your EC2 instance, first expose the EC2 instance to the internet. 
+Then, connect to the EC2 instance using its public IP via RDP. 
+The default Administrator password is <code>Bombe@2024</code>. Be sure to change this password after logging in.</p>
 </div>
 <p>Inside the environment, we have already placed all 3 flags inside:</p>
 <ol>
