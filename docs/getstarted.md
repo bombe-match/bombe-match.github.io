@@ -34,7 +34,7 @@ Choose our AMI in Communtiy AMI.
 
 Inside the environment, we have already placed all 3 flags inside:
 
-1. Registry: `answer_1` in `HKCU:\SOFTWARE\BOMBE`
+1. Registry: `answer_1` in `HKLM:\SOFTWARE\BOMBE`
     - flag is `BOMBE_MAL_FLAG_11111111111111111111111111111111`
 2. Encrypted SQLite database: `C:\Users\bombe\AppData\Local\bhrome\Login Data`
     - flag is `BOMBE_MAL_FLAG_22222222222222222222222222222222`
