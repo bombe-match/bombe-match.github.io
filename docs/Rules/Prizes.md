@@ -1,4 +1,4 @@
-# Prices
+# Prizes
 
 Prices available ONSITE only!  
 Plus, we're giving away FREE stickers. Come grab one!
