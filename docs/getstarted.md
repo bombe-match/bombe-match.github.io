@@ -1,18 +1,27 @@
 # Get Started
 
-You can start from our sample code https://github.com/bombe-match/bombe-poc.  
-Our sample code is written in `C#` with `.NET Runtime 6.0`.  
+Follow below 3 steps to get started:
+
+1. [Write your code](#write-your-code)
+2. [Test your code](#test-your-code)
+3. [Submit the binary](#submit-the-binary)
+4. [Register match](#register-match)
+
+## Write your code
+
+If you don't know how to write, you can start from our sample code https://github.com/bombe-match/bombe-poc. Our sample code is written in `C#` with `.NET Runtime 6.0`. You can use Visual Studio to compile the binary.  
 
 !!! warning "Don't forget the replace secret"
 
     Remember to replace the `secret` with your own `secret`!  
+    Every user will have a unique `secret`, you need to send it with your answer.  
     The `secret` used in the sample and test environment is `00000000000000000000000000000000`.
 
 ```sh
 git clone https://github.com/bombe-match/bombe-poc
 ```
 
-## Test Environment
+## Test your code
 
 We have publish a playground AMI `ami-0fdcac36b3de4482e` (us-west-2) for you to test your sample. In AWS console, you can launch an new EC2 and search for our AMI `ami-0fdcac36b3de4482e`.
 
@@ -43,4 +52,19 @@ Inside the environment, we have already placed all 3 flags inside:
     - flag is `BOMBE_MAL_FLAG_33333333333333333333333333333333`
     - the process will automatically run on system start up.
 
-Refers to our [Rules](../Rules) for more information.
+## Submit the binary
+
+After preparing your binary, you can upload it to our contest website (https://bombe.digitalplaguedoctors.com/submit). Each upload will be assigned a version number, with a new version created every time you submit. Only the latest version of your binary will be used in the competition.
+
+![](assets/submit.png)
+
+## Register match
+
+Once your binary is uploaded, you can register for the nearest match and start competing against other players! The winner of a match will qualify for our tournament, where you'll begin climbing the ranks to the top!
+
+![](assets/register.png)
+
+## Congrats
+
+Now you know how our game works.  
+You can refers to our [Rules](../Rules) for more information.
