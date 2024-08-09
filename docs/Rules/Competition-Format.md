@@ -1,5 +1,7 @@
 # Competition Format
 
+![](../assets/competition_format.png)
+
 ## Knockout Match
 
 The knockout match is held every hour, where participants are paired based on their roles (Malware or EDR). The side that meets the victory conditions in the competition will be retained. If the number of Malware and EDR participants is unequal, there may be one-to-many situations. For example, when the number of Malware is less than EDR, one Malware participant will face multiple EDR participants. In this case, as long as the Malware participant wins in one of the matches, they can advance to the next round. When only one participant remains on one side, all remaining participants will advance to the second stage of the tournament and be awarded prizes.
