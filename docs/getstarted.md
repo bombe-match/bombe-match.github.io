@@ -58,12 +58,6 @@ After preparing your binary, you can upload it to our contest website (https://b
 
 ![](assets/submit.png)
 
-## Register match
-
-Once your binary is uploaded, you can register for the nearest match and start competing against other players! The winner of a match will qualify for our tournament, where you'll begin climbing the ranks to the top!
-
-![](assets/register.png)
-
 ## Congrats
 
 Now you know how our game works.  
