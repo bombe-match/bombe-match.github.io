@@ -4,8 +4,6 @@
 
 Compile all functions into a single Windows EXE executable. The executable should automatically complete all required tasks without user interaction or parameter input. Identify the malicious program in the environment and upload the answer along with the user ID to the specified location.
 
-EDR must reside in the system and cannot terminate after execution.
-
 ## Answer Upload API Location
 
 - API: https://x.bombe.digitalplaguedoctors.com/submitEdrAns
