@@ -6,7 +6,7 @@ Compile all functions into a single Windows EXE executable. The executable shoul
 
 ## Answer Upload API Location
 
-- API: https://x.bombe.digitalplaguedoctors.com/submitEdrAns
+- API: https://submit.bombe.top/submitEdrAns
 
 This API location can only be accessed within the competition's internal network.
 

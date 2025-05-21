@@ -54,7 +54,7 @@ Inside the environment, we have already placed all 3 flags inside:
 
 ## Submit the binary
 
-After preparing your binary, you can upload it to our contest website (https://bombe.digitalplaguedoctors.com/submit). Each upload will be assigned a version number, with a new version created every time you submit. Only the latest version of your binary will be used in the competition.
+After preparing your binary, you can upload it to our contest website. Each upload will be assigned a version number, with a new version created every time you submit. Only the latest version of your binary will be used in the competition.
 
 ![](assets/submit.png)
 
