@@ -77,8 +77,8 @@ SeDelegateSessionUserImpersonatePrivilege Obtain an impersonation token for anot
 
 ## msinfo32
 
-![](../assets/msinfo32.jpg)
+![](/assets/msinfo32.jpg)
 
 ## DeviceGuard status
 
-![](../assets/deviceguard.jpg)
+![](/assets/deviceguard.jpg)

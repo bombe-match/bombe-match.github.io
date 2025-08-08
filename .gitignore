@@ -1,3 +1,7 @@
+site/
+.venv/
+*.swp
+*.DS_Store
 site
 
 .cache

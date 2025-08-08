@@ -1,4 +1,4 @@
-# API hooking
+# API Hooking
 
 API hooking is a process of intercepting and altering the behavior of API calls. This technique is commonly used by many Endpoint Detection and Response (EDR) or antivirus vendors to monitor processes or code execution in real-time for malicious activity.
 
@@ -6,13 +6,13 @@ API hooking is a process of intercepting and altering the behavior of API calls.
 
 API hooking occurs during the startup of a program when certain libraries/DLLs are loaded as modules into the address space of the corresponding user program.
 
-![API hooking](../../assets/API-Hooking/APIHooking.png)
+![API hooking](/assets/API-Hooking/APIHooking.png)
 
-Step 1: When the program calls MessageBoxA(), it jumps to the address of that function.
+Step 1: When the program calls MessageBoxA(), it jumps to the function address.
 
 Step 2: Insert a jump instruction (jmp) in MessageBoxA() to redirect it to our hook function.
 
-Step 3: After executing the hook, it jumps to the trampoline function, which contains a copy of the original first few bytes of MessageBoxA(). This allows the original function's logic to continue after the hook function executes.
+Step 3: After executing the hook, it jumps to the trampoline function, which contains a copy of the original first few bytes of MessageBoxA(). This allows the original function's logic to continue.
 
 Step 4: Once MessageBoxA() finishes executing, it returns to the user code to continue execution.
 
@@ -43,18 +43,18 @@ BOOL WINAPI HookedMessageBoxA(HWND hWnd, LPCSTR lpText, LPCSTR lpCaption, UINT u
 int main()
 {
     DetourTransactionBegin();
-    DetourUpdateThread(GetCurrentThread()); //Setting the current thread as the target thread for Detours
-    DetourAttach(&(PVOID&)pMessageBoxA, HookedMessageBoxA); //Replacing the function pointer for MessageBoxA with the function pointer for HookedMessageBoxA
-    DetourTransactionCommit(); //Submitting the hook operation
+    DetourUpdateThread(GetCurrentThread());
+    DetourAttach(&(PVOID&)pMessageBoxA, HookedMessageBoxA);
+    DetourTransactionCommit();
     // Hooked
     MessageBoxA(NULL, "Original MessageBox!", "Hooked MessageBoxA", MB_OK);
     getchar();
 
-    /*DetourTransactionBegin();
+    /*
+    DetourTransactionBegin();
     DetourUpdateThread(GetCurrentThread());
-    DetourDetach(&(PVOID&)pMessageBoxA, HookedMessageBoxA); //Removing a previously added hook
+    DetourDetach(&(PVOID&)pMessageBoxA, HookedMessageBoxA);
     DetourTransactionCommit();
-    // Original
     MessageBoxA(NULL, "Really Original Messagebox!", "Original MessageBoxA", MB_OK);
     */
 
@@ -62,23 +62,23 @@ int main()
 }
 ```
 
-Hooking :
-![Ex1](../../assets/API-Hooking/AttachExample.png)
-Cancel hooking :
-![Ex2](../../assets/API-Hooking/DetachExample.png)
+Hooking:
+![Ex1](/assets/API-Hooking/AttachExample.png)
+Cancel hooking:
+![Ex2](/assets/API-Hooking/DetachExample.png)
 
 ## EDR hook list
 
 Antivirus software and Endpoint Detection and Response (EDR) platforms can also use behavior-based analysis to identify suspicious API activities. For a list of commonly used EDR hooks, you can refer to this curated [EDR hook list](https://github.com/Mr-Un1k0d3r/EDRs).
 
-![EDR hook list](../../assets/API-Hooking/EDRHookList.png)
+![EDR hook list](/assets/API-Hooking/EDRHookList.png)
 
 ## Tools
 
 - https://github.com/microsoft/Detours
 - https://github.com/Mr-Un1k0d3r/EDRs
 
-## Resource
+## Resources
 
 - https://www.ired.team/offensive-security/code-injection-process-injection/how-to-hook-windows-api-using-c++
 - https://khaled0x07.medium.com/windows-api-hooking-malware-analysis-960da6af5433

@@ -2,15 +2,18 @@
 
 ## Task
 
-Compile all functions into a single Windows EXE executable. The executable should automatically complete all required tasks without user interaction or parameter input. Identify the malicious program in the environment and upload the answer along with the user ID to the specified location.
+Build a single Windows EXE that runs unattended (no UI, no arguments) and:
 
-## Answer Upload API Location
+- Identifies the malicious program present in the environment.
+- Submits the detected malware name with your `secret` to the submission API.
 
-- API: https://submit.bombe.top/submitEdrAns
+## Submission API
 
-This API location can only be accessed within the competition's internal network.
+- API: https://submit.bombe.top/submitEdrAns  
+  (Accessible only within the competition internal network)
+ - Method: POST
 
-## Answer Format
+### Submission payload
 
 ```json
 {
@@ -19,23 +22,22 @@ This API location can only be accessed within the competition's internal network
 }
 ```
 
-Each answer submission must include a `secret`.  
-You will get a `secret` after you signup on our contest website.  
-Answers can only be submitted once.
+- Every submission must include your `secret` (obtained after signup on the contest website).
+- Answers can be submitted only once.
 
-## Malware Name Format
+## What to detect
 
-Malware name is: `BOMBE_EDR_FLAG_xxx`, where `xxx` is a combination of 32 digits and letters.
-
-There will be many other normal programs with the same above format as filenames in the environment. EDR must find the malware among them.
+- Malware filename format: `BOMBE_EDR_FLAG_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`  
+  where the suffix is 32 alphanumeric characters.
+- The environment contains many decoys following the same naming pattern. Your EDR must identify the real malware among them.
 
 ## Prohibitions
 
-- Tampering with or making the target file unreadable.
+- Tampering with, renaming, or making target files unreadable.
 - Causing a system blue screen (BSOD).
-- Destroying the system environment, causing the program to be unable to execute.
+- Damaging the system environment such that programs cannot execute.
 - Interrupting network connections.
 
-## Victory Conditions
+## Victory conditions
 
-Find the malware in the environment and submit the malware name to the specified API.
+Successfully find the malware and submit its filename to the submission API with the correct `secret`.

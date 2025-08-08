@@ -2,22 +2,22 @@
 
 ## Q: What happens if neither Malware nor EDR answers correctly?
 
-In the points match stage, the focus is on updating points, so the ELO scoring system for draws will be used. In the elimination round, the focus is on eliminating unqualified participants. Participants who fail to answer correctly will be eliminated. However, EDR's judgment relies on the presence of malicious behavior by Malware. If Malware does not perform correct answers and shows no malicious behavior, it cannot be used to assess EDR's performance. In this case, if neither Malware nor EDR answers, the Malware participant will be eliminated, and the EDR participant will retain qualification. Below are the scoring and elimination conditions for various situations:
+In the tournament stage, points are updated using the ELO scoring system. However, EDR's judgment relies on the presence of malicious behavior by Malware. If Malware does not perform correct answers and shows no malicious behavior, it cannot be used to assess EDR's performance. In this case, if neither Malware nor EDR answers, the Malware participant will be considered as not achieving the objective, and the EDR participant will retain qualification. Below are the outcomes for various situations:
 
 - EDR Answer Status: `O` represents a correct answer, `X` represents an incorrect answer.
 - Malware Answer Status: `O` represents a correct answer, `X` represents an incorrect answer.
 - Environment Check: `O` represents passing the environment check, `X` represents failing the environment check, possibly due to BSOD.
 
-| EDR Answer Status | Malware Answer Status | Environment Check | Result | Elimination |
-| ----------------- | --------------------- | ----------------- | ------ | ----------- |
-| O                 | O                     | O                 | EDR    | MAL         |
-| X                 | O                     | O                 | MAL    | EDR         |
-| O                 | X                     | O                 | EDR    | MAL         |
-| O                 | O                     | X                 | CRASH  |             |
-| O                 | X                     | X                 | CRASH  |             |
-| X                 | O                     | X                 | CRASH  |             |
-| X                 | X                     | O                 | DRAW   | MAL         |
-| X                 | X                     | X                 | CRASH  |             |
+| EDR Answer Status | Malware Answer Status | Environment Check | Result |
+| ----------------- | --------------------- | ----------------- | ------ |
+| O                 | O                     | O                 | EDR    |
+| X                 | O                     | O                 | MAL    |
+| O                 | X                     | O                 | EDR    |
+| O                 | O                     | X                 | CRASH  |
+| O                 | X                     | X                 | CRASH  |
+| X                 | O                     | X                 | CRASH  |
+| X                 | X                     | O                 | DRAW   |
+| X                 | X                     | X                 | CRASH  |
 
 ## Q: Can Malware and EDR install kernel drivers?
 

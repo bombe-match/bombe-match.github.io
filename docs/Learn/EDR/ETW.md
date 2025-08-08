@@ -2,9 +2,9 @@
 
 Event Tracing for Windows (ETW) provides a mechanism to trace and log events that are raised by user-mode applications and kernel-mode drivers.
 
-![Untitled](../../assets/ETW/ETWArch.png)
+![Untitled](/assets/ETW/ETWArch.png)
 
-The components of ETW include Controller, Provider, Consumer, and Session :
+The components of ETW include Controller, Provider, Consumer, and Session:
 
 - Controller: Controls the enabling/disabling of Providers, creates Sessions, and sets which Providers are responsible.
 - Provider: Generates events and sends them to Sessions.
@@ -17,39 +17,39 @@ One Provider may offer multiple events, each identified by a specific Event ID.
 
 Therefore, there are online resources that compile information about various Providers and their corresponding event IDs. For details, please refer to [Windows10EtwEvents](https://github.com/jdu2600/Windows10EtwEvents/tree/main).
 
-Example :
+Example:
 
-Check Microsoft-Windows-Kernel-Process event
+Check Microsoft-Windows-Kernel-Process events
 
-![Untitled](../../assets/ETW/Win10etwevent.png)
+![Untitled](/assets/ETW/Win10etwevent.png)
 
 ---
 
-### Using ETW:
+### Using ETW
 
 Windows includes a built-in tool called Logman, which can be used to view information about Providers and the status of Sessions.
 
-Example :
+Example:
 
 - `logman query providers` allows you to see all configured Providers on the system
 
-![截圖 2024-06-27 下午5.04.06.png](../../assets/ETW/logman1.png)
+![截圖 2024-06-27 下午5.04.06.png](/assets/ETW/logman1.png)
 
 - Viewing a specific Provider
-  ![截圖 2024-06-27 下午5.07.30.png](../../assets/ETW/logman2.png)
+  ![截圖 2024-06-27 下午5.07.30.png](/assets/ETW/logman2.png)
 - `logman create trace powershell-tracing -ets` Creating a session
-  ![截圖 2024-06-27 下午5.09.12_0.png](../../assets/ETW/logman3.png)
+  ![截圖 2024-06-27 下午5.09.12_0.png](/assets/ETW/logman3.png)
 - `logman update powershell-tracing -p Microsoft-Windows-PowerShell 0x83 -ets`
   This command allows you to specify a Provider and choose the events provided by the Provider.
-  - `-p` choose Provider
+  - `-p` choose provider
   - `0x83` subscribes to events from `Microsoft-Windows-PowerShell`
     - 0x0000000000000001 Runspace
     - 0x0000000000000002 Pipeline
     - 0x0000000000000080 Session
     - 0x01 + 0x02 + 0x80 = 0x83
-      ![截圖 2024-06-27 下午5.11.56_0.png](../../assets/ETW/logman4.png)
+      ![截圖 2024-06-27 下午5.11.56_0.png](/assets/ETW/logman4.png)
 - You can see `powershell-tracing.etl` from the Event Viewer.
-  ![messageImage_1719479691276.jpg](../../assets/ETW/EventViewer.jpg)
+  ![messageImage_1719479691276.jpg](/assets/ETW/EventViewer.jpg)
 
 ---
 
@@ -102,7 +102,7 @@ int main()
 ???+ note
     The executable needs to be run with administrator privileges to function properly.
 
-![Untitled](../../assets/ETW/krebsetw.png)
+![Untitled](/assets/ETW/krebsetw.png)
 
 ---
 
@@ -110,13 +110,13 @@ int main()
 
 ETWProcessMon2 is for Monitoring Process/Thread/Memory/Imageloads/TCPIP via ETW + Detection for Remote-Thread-Injection & Payload Detection by VirtualMemAlloc Events (in-memory) etc. For details, please refer to [ETWProcessMon2](https://github.com/DamonMohammadbagher/ETWProcessMon2) .
 
-### **Tools**
+### Tools
 
 - https://github.com/jdu2600/Windows10EtwEvents
 - https://learn.microsoft.com/zh-tw/windows-server/administration/windows-commands/logman
 - https://github.com/DamonMohammadbagher/ETWProcessMon2
 
-### **Resource**
+### Resources
 
 - https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/etw-event-tracing-for-windows-101
 - https://github.com/microsoft/krabsetw

@@ -4,7 +4,7 @@ In addition to scanning static files with Yara rules, directly scanning memory i
 
 ## VirtualQuery
 
-The parameters of `VirtualQuery` is as follow. refer to https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualquery.
+Parameters of `VirtualQuery` (see: https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualquery):
 
 ```c
 
@@ -17,8 +17,7 @@ SIZE_T VirtualQuery(
 
 ## MEMORY_BASIC_INFORMATION
 
-The output of `VirtualQuery` will be stored in the structure of `MEMORY_BASIC_INFORMATION`. The structure including information related to a range of pages in the process's virtual address space (e.g., base address, size, state, protection attributes, and type).
-refer to https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-memory_basic_information.
+The output of `VirtualQuery` is stored in `MEMORY_BASIC_INFORMATION`, which describes a range of pages in a process's virtual address space (base address, size, state, protection, type). See: https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-memory_basic_information
 
 ```c
 typedef struct _MEMORY_BASIC_INFORMATION {
@@ -34,9 +33,9 @@ typedef struct _MEMORY_BASIC_INFORMATION {
 
 ```
 
-## Example 1 of VirtualQuery
+## Example 1: VirtualQuery basics
 
-How to use the VirtualQuery function to query and output information about a specific memory region
+Query and print information about a specific memory region:
 
 ```c
 #include <windows.h>
@@ -71,9 +70,9 @@ State: 0x1000 // MEM_COMMIT
 Type: 0x20000 // MEM_PRIVATE
 ```
 
-## Example 2 of VirtualQuery
+## Example 2: Allocate, query, and free
 
-We allocated a 1024-byte virtual memory block with VirtualAlloc, queried its information using VirtualQuery, and released it with VirtualFree. Ensure the lpBuffer size passed to VirtualQuery is sufficient to hold the queried virtual memory information to avoid ERROR_INSUFFICIENT_BUFFER.
+Allocate a 1024-byte virtual memory block with VirtualAlloc, query it using VirtualQuery, then release it with VirtualFree. Ensure `lpBuffer` is large enough or you may get `ERROR_INSUFFICIENT_BUFFER`.
 
 ```c
 #include <windows.h>
@@ -115,7 +114,7 @@ int main() {
 
 ```
 
-### Resource
+### Resources
 
 - https://www.mdsec.co.uk/2020/08/firewalker-a-new-approach-to-generically-bypass-user-space-edr-hooking/
 - https://www.secforce.com/blog/whisper2shout-unhooking-technique/

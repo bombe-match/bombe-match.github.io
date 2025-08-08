@@ -1,8 +1,7 @@
-nav:
+arrange:
   - index.md
   - Competition-Format.md
   - Execution-Environment.md
   - Malware.md
   - EDR.md
-  - Prizes.md
   - FAQ.md

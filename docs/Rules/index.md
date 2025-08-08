@@ -10,5 +10,4 @@ This competition aims to simulate the offensive and defensive confrontations bet
 - [Execution Environment](Execution-Environment.md)
 - [Rules for Malware](Malware.md)
 - [Rules for EDR](EDR.md)
-- [Prices](Prices.md)
 - [FAQ](FAQ.md)

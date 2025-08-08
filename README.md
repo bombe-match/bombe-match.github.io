@@ -1,19 +1,26 @@
 # BOMBE Docs
 
-## Install Dependency
+## Install Dependencies (uv)
 
-```
-poetry install
+```sh
+uv sync --frozen
 ```
 
 ## Run Local Server
 
-```
-poetry run mkdocs serve
+```sh
+uv run mkdocs serve
 ```
 
-## Deploy to Github Pages
+## Build (strict)
 
+```sh
+uv run mkdocs build --strict
 ```
-poetry run mkdocs gh-deploy
+
+## Deploy to GitHub Pages
+
+```sh
+# This will push to the gh-pages branch
+uv run mkdocs gh-deploy
 ```

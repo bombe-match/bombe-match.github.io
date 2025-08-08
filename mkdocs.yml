@@ -1,5 +1,5 @@
 site_name: BOMBE Docs
-site_url: https://bombe-match.github.io/BOMBE-Docs
+site_url: https://docs.bombe.top
 repo_name: bombe-match/bombe-match.github.io
 repo_url: https://github.com/bombe-match/bombe-match.github.io
 theme:
@@ -30,6 +30,8 @@ theme:
   features:
     - navigation.instant
     - navigation.tabs
+    - content.code.copy
+    - navigation.footer
 plugins:
   - search
   - awesome-pages

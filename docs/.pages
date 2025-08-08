@@ -1,4 +1,5 @@
-nav:
-  - getstarted.md
+arrange:
+  - GetStarted
   - Rules
   - Learn
+  - About
