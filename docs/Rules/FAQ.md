@@ -2,22 +2,31 @@
 
 ## Q: What happens if neither Malware nor EDR answers correctly?
 
-In the tournament stage, points are updated using the ELO scoring system. However, EDR's judgment relies on the presence of malicious behavior by Malware. If Malware does not perform correct answers and shows no malicious behavior, it cannot be used to assess EDR's performance. In this case, if neither Malware nor EDR answers, the Malware participant will be considered as not achieving the objective, and the EDR participant will retain qualification. Below are the outcomes for various situations:
+Each Battle evaluates four objectives: three Malware targets and one EDR
+detection target. The outcome is determined in this order:
 
-- EDR Answer Status: `O` represents a correct answer, `X` represents an incorrect answer.
-- Malware Answer Status: `O` represents a correct answer, `X` represents an incorrect answer.
-- Environment Check: `O` represents passing the environment check, `X` represents failing the environment check, possibly due to BSOD.
+1. If the participant launch or runtime crashes the Battle environment, the
+   result is `CRASH`.
+2. If the EDR detection objective passes, EDR wins.
+3. Otherwise, if all three Malware objectives pass, Malware wins.
+4. Otherwise, the result is a draw.
 
-| EDR Answer Status | Malware Answer Status | Environment Check | Result |
-| ----------------- | --------------------- | ----------------- | ------ |
-| O                 | O                     | O                 | EDR    |
-| X                 | O                     | O                 | MAL    |
-| O                 | X                     | O                 | EDR    |
-| O                 | O                     | X                 | CRASH  |
-| O                 | X                     | X                 | CRASH  |
-| X                 | O                     | X                 | CRASH  |
-| X                 | X                     | O                 | DRAW   |
-| X                 | X                     | X                 | CRASH  |
+This means a correct EDR detection wins even if Malware also retrieves all
+three targets. If neither side completes its victory condition, the Battle is a
+draw. Tournament scoring uses win rate rather than ELO.
+
+## Q: Where should my binary submit answers?
+
+Read `BOMBE_SUBMIT_BASE_URL` from the environment at runtime and append the
+endpoint for your role. There is no stable hostname to compile into a binary.
+See [Submission API](Submission-API.md).
+
+## Q: Can I retry a submission?
+
+Invalid JSON, missing fields, and an invalid `secret` can be corrected and
+retried while the Battle is running. Once an answer slot accepts a well-formed
+request with the correct secret, that slot is fixed, even if the answer is
+wrong. Malware has three independent answer slots; EDR has one.
 
 ## Q: Can Malware and EDR install kernel drivers?
 

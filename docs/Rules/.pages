@@ -2,6 +2,7 @@ arrange:
   - index.md
   - Competition-Format.md
   - Execution-Environment.md
+  - Submission-API.md
   - Malware.md
   - EDR.md
   - FAQ.md

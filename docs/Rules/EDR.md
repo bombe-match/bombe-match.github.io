@@ -9,9 +9,13 @@ Build a single Windows EXE that runs unattended (no UI, no arguments) and:
 
 ## Submission API
 
-- API: https://submit.bombe.top/submitEdrAns  
-  (Accessible only within the competition internal network)
- - Method: POST
+- Base URL: read `BOMBE_SUBMIT_BASE_URL` from the process environment at runtime
+- Endpoint: `/submitEdrAns`
+- Method: `POST`
+- Access: Battle VM internal network only
+
+See [Submission API](Submission-API.md) for URL construction and examples. Do
+not hard-code a hostname.
 
 ### Submission payload
 
@@ -23,7 +27,9 @@ Build a single Windows EXE that runs unattended (no UI, no arguments) and:
 ```
 
 - Every submission must include your `secret` (obtained after signup on the contest website).
-- Answers can be submitted only once.
+- The answer slot stores the first well-formed submission made with the correct
+  secret. Invalid payloads and invalid secrets can be retried, but a stored
+  wrong answer cannot be replaced.
 
 ## What to detect
 

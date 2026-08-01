@@ -14,6 +14,20 @@
 
 Both EDR and Malware have Administrator privileges.
 
+## Runtime configuration
+
+The platform sets `BOMBE_SUBMIT_BASE_URL` as a machine environment variable
+before participant programs start. New participant processes inherit the value,
+and programs should read it at runtime to locate the private answer API. The
+value is environment-specific, is not a credential, and may change between
+platform deployments.
+
+See [Submission API](Submission-API.md) for endpoint paths and code examples.
+
+The EDR starts before the Malware workload. Malware and decoy executables are
+then launched through the same mechanism with randomized filenames so launch
+metadata does not identify which process is the real Malware.
+
 ## `whoami /all`
 
 ```

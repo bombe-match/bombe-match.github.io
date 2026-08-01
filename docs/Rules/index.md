@@ -8,6 +8,7 @@ This competition aims to simulate the offensive and defensive confrontations bet
 
 - [Competition Format](Competition-Format.md)
 - [Execution Environment](Execution-Environment.md)
+- [Submission API](Submission-API.md)
 - [Rules for Malware](Malware.md)
 - [Rules for EDR](EDR.md)
 - [FAQ](FAQ.md)

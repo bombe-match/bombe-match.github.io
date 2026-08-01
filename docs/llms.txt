@@ -1,0 +1,44 @@
+# BOMBE
+
+> BOMBE is a Windows Malware-versus-EDR competition. This file is a curated
+> index for language models; the linked documentation remains authoritative.
+
+## Participant documentation
+
+- [Get started](https://docs.bombe.top/): Build, test, screen, and select a participant binary.
+- [Participant CLI](https://docs.bombe.top/CLI/): Authenticated upload, screening feedback, Challenge, and Tournament commands designed for coding agents.
+- [Rules overview](https://docs.bombe.top/Rules/): Authoritative participant rules and prohibitions.
+- [Competition format](https://docs.bombe.top/Rules/Competition-Format/): Screening, Challenge, Tournament matrix, and scoring.
+- [Execution environment](https://docs.bombe.top/Rules/Execution-Environment/): Windows VM capabilities and runtime configuration.
+- [Submission API](https://docs.bombe.top/Rules/Submission-API/): Runtime base URL, endpoints, payload behavior, and verdicts.
+- [Malware rules](https://docs.bombe.top/Rules/Malware/): Malware objectives and payload schema.
+- [EDR rules](https://docs.bombe.top/Rules/EDR/): EDR objective and payload schema.
+- [FAQ](https://docs.bombe.top/Rules/FAQ/): Outcome priority and submission retry semantics.
+
+## Code
+
+- [Participant starter repository](https://github.com/bombe-match/bombe-poc): C# Malware and EDR examples, participant CLI, `AGENTS.md`, a repo-local build skill, and scripts for the public Windows Test Lab AMI. Clone it and follow `AGENTS.md` for the agent workflow.
+- [Documentation source](https://github.com/bombe-match/bombe-match.github.io): Complete Markdown source for this site.
+
+## Implementation note
+
+Treat `BOMBE_SUBMIT_BASE_URL` as an opaque, platform-provided runtime value. Do
+not hard-code or derive a submission hostname. Follow the linked Submission API
+page for the current contract.
+
+For platform testing, run `bombe auth status`. If signed out, ask the human to
+complete `bombe auth login` in an interactive terminal. Then use `bombe binary
+upload --wait --json`; never ask for an account password or copy cached Cognito
+tokens into a prompt. Ask for explicit confirmation before activating a binary
+in a live Tournament.
+
+Use the participant CLI, not AWS access, to inspect player-visible results:
+
+- `bombe challenge history [challenge-id] --limit 20 --json`
+- `bombe challenge result <attempt-id> --json`
+- `bombe tournament history [id-or-slug] --role mal --result win --limit 20 --json`
+
+Challenge exit status 2 means the completed attempt did not clear the
+Challenge. Read the structured attempt and verdicts before treating a non-zero
+status as a platform error. History is owner-scoped and intentionally excludes
+private Battle execution, infrastructure, and cleanup details.

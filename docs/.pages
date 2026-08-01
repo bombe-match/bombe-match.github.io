@@ -1,5 +1,6 @@
 arrange:
   - index.md
+  - CLI.md
   - Rules
   - Learn
   - About
